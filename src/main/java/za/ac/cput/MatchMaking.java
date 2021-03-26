@@ -1,5 +1,12 @@
 package za.ac.cput;
 
+/**
+*
+ * @author Caleb Ruiters - 215169751
+ *
+ * This
+* */
+
 public class MatchMaking {
     private String id, desc;
 
