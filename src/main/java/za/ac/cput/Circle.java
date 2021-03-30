@@ -21,16 +21,16 @@ public class Circle {
         this.radius = radius;
     }
 
-    public double calculateArea(){
-        double a = 0;
-        a = radius * radius * 3.14;
-        return a;
-    }
-    public double calculateCircumference(){
-        double c = 0;
-        c = radius * 2 * 3.14;
-        return c;
-    }
+//    public double calculateArea(){
+//        double a = 0;
+//        a = radius * radius * 3.14;
+//        return a;
+//    }
+//    public double calculateCircumference(){
+////        double c = 0;
+////        c = radius * 2 * 3.14;
+////        return c;
+//    }
 
     @Override
     public String toString() {
