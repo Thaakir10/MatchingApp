@@ -1,7 +1,12 @@
 package za.ac.cput;
 
-import org.junit.jupiter.api.*;
+/*
+ * @Author: Thokozile Snono
+ * Student number: 216032121
+ * This is the test class for the Circle class
+ */
 
+import org.junit.jupiter.api.*;
 import static java.util.concurrent.TimeUnit.NANOSECONDS;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -17,25 +22,37 @@ class CircleTest {
         circle3 = circle1;
     }
 
+    //will fail because they are not equal
     @Test
-    void testIdentity() {
+    public void testEquality() {
         Assertions.assertEquals(circle1, circle2);
     }
 
-//    @Test
-//    public void testEquality() {
-//        assertEquals(circle1, circle2);
-//    }
-//
-//    @Test
-//    void getRadius() {
-//        fail("The reason for this is for the program to fail");
-//    }
-//
-//    @Test(timeout = 1000)
-//    public void testWithTimeout(){
-//        final int factorialOf = 1 + (int) (30000 * Math.random());
-//    }
-//
-//    public void disabledTest()
+    //will pass because they are identical
+    @Test
+    public void testIdentity() {
+        Assertions.assertSame(circle1, circle3);
+    }
+
+    //display all variables on the list
+    @Test
+    @DisplayName("Display all variables on the list")
+    public void getRadius() {
+        org.junit.jupiter.api.Assertions.fail("Not implemented");
+    }
+
+    //setting the timeout
+    @Test
+    @org.junit.jupiter.api.Timeout(value = 1000, unit = NANOSECONDS)
+    public void testWithTimeout(){
+        //while(true);
+    }
+
+    //it does not pass the test.It skips the test because it is still on progress
+    @Test
+    @Disabled
+    @DisplayName("TDD method should not run")
+    public void testDisable(){
+        org.junit.jupiter.api.Assertions.fail("This test should be disabled");
+    }
 }
