@@ -11,8 +11,7 @@ import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Timeout;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertSame;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class NamesTest {
 
@@ -55,6 +54,6 @@ public class NamesTest {
     public void getNameFailing(){
         Names t3 = new Names("Keane");
         Names t4 = new Names("Sam");
-        assertEquals("Keane", t4.getNameFailing());
+        fail("Keane");
     }
 }

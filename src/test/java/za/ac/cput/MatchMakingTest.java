@@ -47,8 +47,10 @@ class MatchMakingTest {
     }
 
     @org.junit.jupiter.api.Test
-    @org.junit.jupiter.api.Timeout(value = 1, unit = NANOSECONDS)
-    void setId() {
+    @org.junit.jupiter.api.Timeout(value = 3990, unit = NANOSECONDS)
+    void setId() throws InterruptedException {
+        Thread.sleep(4000);
+        System.out.println("System timeout");
     }
 
     @org.junit.jupiter.api.Test
